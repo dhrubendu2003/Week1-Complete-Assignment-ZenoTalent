@@ -2,3 +2,4 @@ timestamp,city,country,temperature,feels_like,humidity,pressure,wind_speed,descr
 2025-07-26 12:07:57,London,GB,17.11,17.04,83,1016,2.64,clear sky,Mild,Humid conditions!
 2025-07-26 12:08:19,Kolkata,IN,27.52,31.98,88,998,4.6,light rain,Mild,Humid conditions!
 2025-07-26 12:08:39,Delhi,IN,33.03,37.56,54,997,3.58,overcast clouds,Hot,None
+2025-07-26 12:21:51,Mumbai,IN,26.9,29.88,84,1003,9.68,overcast clouds,Mild,Humid conditions!
