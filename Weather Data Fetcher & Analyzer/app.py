@@ -3,13 +3,12 @@ import csv
 import os
 from datetime import datetime
 
-# Replace "YOUR_API_KEY_HERE" with your actual API key
 API_KEY = "8544f8218d68a0ade388e2986e4359bb"  # Example API key
 
 def fetch_weather(city: str, api_key: str) -> dict:
-    """
-    Fetch weather data for a given city using OpenWeatherMap API
-    """
+
+    # Fetch weather data for a given city using OpenWeatherMap API
+
     try:
         url = f"https://api.openweathermap.org/data/2.5/weather"
         params = {
@@ -39,10 +38,10 @@ def fetch_weather(city: str, api_key: str) -> dict:
         raise e
 
 def analyze_weather(weather_data: dict) -> tuple:
-    """
-    Analyze weather data and return temperature category and warnings
-    Returns: (temperature_category, warnings_list)
-    """
+
+    # Analyze weather data and return temperature category and warnings
+    # Returns: (temperature_category, warnings_list)
+
     try:
         temp = weather_data['main']['temp']
         
@@ -71,9 +70,9 @@ def analyze_weather(weather_data: dict) -> tuple:
         raise Exception(f"Error analyzing weather: {e}")
 
 def log_weather(city: str, api_key: str, filename: str = "weather_log.csv"):
-    """
-    Fetch weather for city and append data to CSV file
-    """
+
+    # Fetch weather for city and append data to CSV file
+
     try:
         weather_data = fetch_weather(city, api_key)
         temp_category, warnings = analyze_weather(weather_data)
@@ -110,9 +109,9 @@ def log_weather(city: str, api_key: str, filename: str = "weather_log.csv"):
         raise Exception(f"Error logging weather: {e}")
 
 def display_weather_info(weather_data: dict, temp_category: str, warnings: list):
-    """
-    Display formatted weather information
-    """
+
+    # Display formatted weather information
+
     print("\n" + "="*50)
     print("WEATHER INFORMATION")
     print("="*50)
